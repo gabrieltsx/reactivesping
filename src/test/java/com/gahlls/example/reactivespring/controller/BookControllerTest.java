@@ -167,4 +167,13 @@ public class BookControllerTest {
                 .exchange()
                 .expectStatus().isNotFound();
     }
+
+    @Test
+    public void runTimeException(){
+        webTestClient.get().uri(BOOK_END_POINT+"/runtimeException")
+                .exchange()
+                .expectStatus().is5xxServerError()
+                .expectBody(String.class)
+                .isEqualTo("RuntimeException Occurred.");
+    }
 }

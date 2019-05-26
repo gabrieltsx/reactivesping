@@ -54,4 +54,9 @@ public class BookController {
                 .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
+    @GetMapping("/runtimeException")
+    public Flux<Book> runtimeException(){
+        return bookReactiveRepository.findAll()
+                .concatWith(Mono.error(new RuntimeException("RuntimeException Occurred.")));
+    }
 }
