@@ -20,4 +20,7 @@ The project is created with Gradle, so you just need to import it to your IDE an
 # Usage
 Run the project through the IDE and head out to http://localhost:8080
 
+# Contact
+Any question, bug and comment, you can mail me in gabrielhenrique.ls96@gmail.com or use Issues tab here in GitHub
+
 Thank you.
